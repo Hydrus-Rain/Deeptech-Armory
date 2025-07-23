@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Sniper Rifle -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DTA_HCMRifle</defName>
+    <label>H.C.M Rifle</label>
+    <description>A High Caliber Marksman Rifle. Produced to counter light to medium armor, but not as effective against heavy armor. Often used for surgical removal of key targets.</description>
+    <graphicData>
+      <drawSize>1.5,1.5</drawSize>
+      <texPath>Things/Deeptech/Weapons/Ranged/Sniper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers>
+        <li>DTA_SynthBench</li>
+      </recipeUsers>
+      <researchPrerequisites>
+        <li>Fabrication</li>
+        <li>PrecisionRifling</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>150</Plasteel>
+      <Steel>125</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Deeptech_SniperRifle_round</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>75.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Deeptech_SniperRifle_round</defName>
+    <label>deeptech sniper rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Deeptech/Weapons/Projectiles/BulletLarge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>70</damageAmountBase>
+      <stoppingPower>3.5</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+</Defs>
