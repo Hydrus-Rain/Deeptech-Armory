@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--Railcannon-07-->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Deeptech_Railcannon</defName>
+		<label>Railcannon-07 "Surge"</label>
+		<description>A Railgun with added coils for increased power. Usually used by infantry or dedicated marksmen.</description>
+		<graphicData>
+			<texPath>Things/Deeptech/Weapons/Ranged/Railcannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<uiIconScale>0.90</uiIconScale>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<recipeUsers>
+        			<li>DTA_SynthBench</li>
+      			</recipeUsers>
+			<researchPrerequisite>StandardizedArms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>7500</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.69</AccuracyShort>
+			<AccuracyMedium>0.89</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
+			<RangedWeapon_Cooldown>0.27</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Plasteel>120</Plasteel>
+			<Uranium>5</Uranium>
+			<Steel>75</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DTA_Railcannon_Round</defaultProjectile>
+				<warmupTime>3.05</warmupTime>
+				<range>30.9</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>DTA_Railcannon_Round</defName>
+		<label>Railcannon Round</label>
+		<graphicData>
+			<texPath>Things/Deeptech/Weapons/Projectiles/BulletRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>95</damageAmountBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

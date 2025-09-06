@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Snow Owl -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DTA_SnowOwl</defName>
+    <label>"Snow Owl" Compound Bow</label>
+    <description>A Massive Folding Compound bow designed for use in Sub-Zero Temperatures and Ease of Maintenance. With an impressive 30 kg Draw weight, it can shoot as far as a sniper rifle, yet nearly silent in its operation. Uses specially made arrows capable of rapidly cooling any organic target when hit.</description>
+    <graphicData>
+      <drawSize>1.7,1.7</drawSize>
+	  <texPath>Things/Borealis/Weapons/Ranged/SnowOwl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+	<researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>2.1</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.94</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <Steel>125</Steel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>DTA_SnowFeather</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>32</range>
+        <soundCast>Bow_Large</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>DTA_SnowFeather</defName>
+    <label>Snow Owl "Feather" Arrow</label>
+    <graphicData>
+	 <drawSize>1.5,1.5</drawSize>
+	 <texPath>Things/Borealis/Weapons/Projectiles/Arrow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+	<damageDef>DTA_RapidThermalCooling</damageDef>
+      <damageAmountBase>69</damageAmountBase>
+      <stoppingPower>3.8</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

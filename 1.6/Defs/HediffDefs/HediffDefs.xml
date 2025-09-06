@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+  <!-- Rapid Cooling -->
+<HediffDef>
+    <defName>DTA_RapidCooling</defName>
+    <label>Rapid Cooling Burns</label>
+    <description>An affliction caused by a rapid loss of energy with the body.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600~900</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.2</minSeverity>
+        <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.35</minSeverity>
+        <hungerRateFactorOffset>-0.4</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.62</minSeverity>
+        <hungerRateFactorOffset>-0.95</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--Mechanite Corrosion-->
+<HediffDef>
+    <defName>DTA_MechaniteCorrosion</defName>
+    <label>Mechanite Corrosion</label>
+    <description>An affliction caused by rampant corrosive mechanites. The feeling has been reported to feel like being burned, as the mechanites compromise cellular structures, but not enough to outright kill the affected.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(155,71,55)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1600~3500</disappearsAfterTicks>
+      </li>
+    </comps>
+ <stages>
+        <li>
+		  <label>Melting</label>
+          <painFactor>1.2</painFactor>
+          <statFactors>
+          <MeleeDodgeChance>0.8</MeleeDodgeChance>
+	      <IncomingDamageFactor>1.2</IncomingDamageFactor>
+          </statFactors>
+        </li>
+		
+        <li>
+		  <minSeverity>1.5</minSeverity>
+		  <label>Dissolving</label>
+		  <painFactor>1.9</painFactor>
+          <statFactors>
+          <MeleeDodgeChance>0.5</MeleeDodgeChance>
+	      <IncomingDamageFactor>1.5</IncomingDamageFactor>
+          </statFactors>
+        </li>
+		
+        <li>
+		  <minSeverity>2.5</minSeverity>
+		  <label>Falling Apart</label>
+		  <painFactor>2.0</painFactor>
+          <statFactors>
+          <MeleeDodgeChance>0.2</MeleeDodgeChance>
+	      <IncomingDamageFactor>2</IncomingDamageFactor>
+          </statFactors>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <!--Neutralizer Mechanites-->
+  <HediffDef ParentName="DiseaseBase">
+    <defName>DTA_Neutralizer_Mechanites</defName>
+    <description>A special strain of mechanites that directly targets the nervous systems of those affected by it, what it does is simply block any form of nerve signals from being sent throughout the body, without causing any damage to the nervous system itself.</description>
+    <label>tranquilizer</label>
+       <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>5000</min>
+          <max>5000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Beginning Disruption</label>
+        <minSeverity>0.25</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.75</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Blocking Nerve Signals</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.3</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Major</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.4</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Neutralized Nervous System</label>
+        <minSeverity>1.0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

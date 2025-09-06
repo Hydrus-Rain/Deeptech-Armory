@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Polar Talon -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>DTA_PolarTalon</defName>
+    <label>Polar Talon</label>
+    <description>A Long Harpoon shaped spear, this weapon is designed for use in Sub-Zero Environments with a speartip capable of breaching thick ice, or fabrics if necessary.</description>
+    <graphicData>
+	<drawSize>1.9,1.9</drawSize>
+      <texPath>Things/Borealis/Weapons/Melee/PolarTalon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <Steel>100</Steel>
+    </costList>
+	<recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+      <researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>350</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+	  <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+	  <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

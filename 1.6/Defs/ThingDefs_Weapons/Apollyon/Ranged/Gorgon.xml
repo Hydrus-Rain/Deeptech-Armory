@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Gorgon -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>DTA_Gorgon</defName>
+		<label>"Gorgon" Mobile Ballista</label>
+		<description>A Massive yet suprisingly light, Quad Limbed and Semiauto heavy ballista, Designed to fire Heavy Piercing bolts laced with corrosive mechanites using synthetic, sinew-like strings with over 320 kg.</description>
+		<graphicData>
+		<texPath>Things/Apollyon/Weapons/Ranged/Gorgon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.7,1.7</drawSize>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+	<recipeUsers><li>DTA_ApollyonBench</li></recipeUsers>
+      <researchPrerequisite>Apollyon</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>1.1</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.89</AccuracyLong>
+			<RangedWeapon_Cooldown>0.29</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Plasteel>75</Plasteel>
+			<Steel>256</Steel>
+			<ComponentIndustrial>9</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DTA_GorgonBolt</defaultProjectile>
+				<warmupTime>0.45</warmupTime>
+				<range>35</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>Bow_Large</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>DTA_GorgonBolt</defName>
+		<label>Gorgon Bolts</label>
+		<graphicData>
+		<drawSize>1.5,1.5</drawSize>
+		<texPath>Things/Apollyon/Weapons/Projectiles/p2</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <projectile>
+	<damageDef>DTA_RapidMechaniteCorrosion</damageDef>
+      <damageAmountBase>72</damageAmountBase>
+      <stoppingPower>3.8</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+	</ThingDef>
+</Defs>

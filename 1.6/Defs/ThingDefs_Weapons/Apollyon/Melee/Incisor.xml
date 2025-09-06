@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Incisor -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DTA_Incisor</defName>
+    <label>"Incisor" Monoblade</label>
+    <description>A light monoblade, sharpened and maintained by a self contained and self perpetuating mechanite swarm that corrodes any targets it hits.</description>
+    <graphicData>
+	<drawSize>1.3,1.3</drawSize>
+      <texPath>Things/Apollyon/Weapons/Melee/Incisor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>15</Plasteel>
+      <Steel>75</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>8500</WorkToMake>
+      <Mass>1.1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+			<li>
+			<label>Corrosive Blade</label>
+			<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+			</capacities>
+			<cooldownTime>3</cooldownTime>
+		</li>
+		</tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_ApollyonBench</li></recipeUsers>
+      <researchPrerequisite>Apollyon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

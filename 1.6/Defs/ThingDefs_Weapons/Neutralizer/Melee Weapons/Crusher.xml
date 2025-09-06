@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Crusher -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>DTA_Crusher</defName>
+    <label>Crusher</label>
+    <description>A long and blunt polearm for crushing targets, bulked up for extensive use in combat and in tearing down fortifications.</description>
+    <graphicData>
+	<drawSize>1.9,1.9</drawSize>
+      <texPath>Things/Neutralizer/Crusher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Steel>110</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>1.1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>Handleguard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+	   <li>
+        <label>Crushing Head</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Demolish</li>
+        </capacities>
+        <power>35</power>
+        <cooldownTime>3.5</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	<recipeUsers><li>TableMachining</li></recipeUsers>
+      <researchPrerequisite>Neutralizer</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>550</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

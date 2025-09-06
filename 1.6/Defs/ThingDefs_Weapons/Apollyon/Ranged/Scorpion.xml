@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Scorpion -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>DTA_Scorpion</defName>
+		<label>"Scorpion" Shotgun</label>
+		<description>A strange shotgun designed to be entirely self sufficient, capable of shooting slugs coated in corrosive mechanites.</description>
+		<graphicData>
+		<texPath>Things/Apollyon/Weapons/Ranged/Scorpion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.4,1.4</drawSize>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<recipeMaker>
+	<recipeUsers><li>DTA_ApollyonBench</li></recipeUsers>
+      <researchPrerequisite>Apollyon</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>11200</WorkToMake>
+			<Mass>1.1</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.87</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.69</AccuracyLong>
+			<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Plasteel>75</Plasteel>
+			<Steel>125</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DTA_Scorpionslugs</defaultProjectile>
+				<warmupTime>0.37</warmupTime>
+				<range>18.1</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>10.9</ticksBetweenBurstShots>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>DTA_Scorpionslugs</defName>
+		<label>Scorpion Slugs</label>
+		<graphicData>
+		<drawSize>1.5,1.5</drawSize>
+		<texPath>Things/Apollyon/Weapons/Projectiles/p2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+ <projectile>
+	<damageDef>DTA_RapidMechaniteCorrosion</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <stoppingPower>1.8</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+	</ThingDef>
+</Defs>

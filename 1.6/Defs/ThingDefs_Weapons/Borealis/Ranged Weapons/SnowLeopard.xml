@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Snow Leopard -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DTA_SnowLoepard</defName>
+    <label>"Snow Leopard" Sniper Rifle</label>
+    <description>A Specially made sniper rifle designed for Sub-Zero Environments, incredibly light and Comes with a built in Suppressor.</description>
+    <graphicData>
+      <drawSize>1.5,1.5</drawSize>
+	  <texPath>Things/Borealis/Weapons/Ranged/SnowLeopard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+	<researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>1.7</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <Steel>100</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>DTA_SnowLeopardRound</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>25.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DTA_SnowLeopardRound</defName>
+    <label>Snow Leopard Round</label>
+    <graphicData>
+	 <drawSize>1.5,1.5</drawSize>
+	 <texPath>Things/Borealis/Weapons/Projectiles/SR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>75</damageAmountBase>
+      <stoppingPower>3.5</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

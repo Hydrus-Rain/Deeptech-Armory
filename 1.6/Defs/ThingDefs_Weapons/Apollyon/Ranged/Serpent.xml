@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Serpent -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>DTA_Serpent</defName>
+		<label>"Serpent" Rifle</label>
+		<description>A strange rifle designed to be entirely self sufficient, with pulsing vein like structures that flow with its built in Corrosive mechanite hive, making it capable of long periods of attrition based combat. Has a built in melee weapon capable of depositing wea amounts of said corrsive mechanites.</description>
+		<graphicData>
+		<texPath>Things/Apollyon/Weapons/Ranged/Serpent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.4,1.4</drawSize>
+		</graphicData>
+		<uiIconScale>1.0</uiIconScale>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+	<recipeUsers><li>DTA_ApollyonBench</li></recipeUsers>
+      <researchPrerequisite>Apollyon</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>1.1</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.89</AccuracyLong>
+			<RangedWeapon_Cooldown>0.29</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Plasteel>75</Plasteel>
+			<Steel>256</Steel>
+			<ComponentIndustrial>9</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DTA_SerpentRounds</defaultProjectile>
+				<warmupTime>0.35</warmupTime>
+				<range>21.1</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		<li>
+        <label>Fangpoint</label>
+        <capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>DTA_SerpentRounds</defName>
+		<label>Serpent Rounds</label>
+		<graphicData>
+		<drawSize>1.5,1.5</drawSize>
+		<texPath>Things/Apollyon/Weapons/Projectiles/p2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+ <projectile>
+	<damageDef>DTA_RapidMechaniteCorrosion</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <stoppingPower>1.8</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+	</ThingDef>
+</Defs>

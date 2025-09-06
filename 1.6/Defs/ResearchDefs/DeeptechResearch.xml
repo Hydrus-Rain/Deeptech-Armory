@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>ColdFusion</defName>
+    <label>Cold Fusion Energy Production</label>
+    <description>Begin research on controlled fusion reactors that are capable of recycling ambient heat into more power.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <researchViewX>0.00</researchViewX>
+	<researchViewY>0.90</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <discoveredLetterTitle>Cold Fusion</discoveredLetterTitle>
+    <discoveredLetterText>You've learned how to create a cold fusion reactor.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Nanoengineering</defName>
+    <label>Nanoscale Engineering</label>
+    <description>Begin research on the molecular structures of available materials, allowing for stronger, yet lighter designs.</description>
+    <baseCost>4500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>0.10</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <discoveredLetterTitle>Micromaterial Research</discoveredLetterTitle>
+    <discoveredLetterText>You've learned how to craft stronger nanostructures via microengineering.\n\nFurther research unlocked.</discoveredLetterText>
+  </ResearchProjectDef>
+ 
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>NanoCompFab</defName>
+    <label>Nanocomponent Fabrication</label>
+    <description>Begin research on making smaller components, allowing for more compact and efficient designs.</description>
+    <baseCost>6500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Nanoengineering</li>
+      <li>Fabrication</li>
+    </prerequisites>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>0.10</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <discoveredLetterTitle>Nanocomponents</discoveredLetterTitle>
+    <discoveredLetterText>You've learned how to craft Nanoscale-components.\n\nFurther research will yield better outcomes.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>CompactConstruction</defName>
+    <label>Compact Mechanical Construction</label>
+    <description>Research miniaturized mechanical designs and blueprints, allowing for more compact designs and blueprints.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>NanoCompFab</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>HiTechResearchBench</li>
+    </requiredResearchFacilities>
+  <researchViewX>2.00</researchViewX>
+  <researchViewY>0.10</researchViewY>
+    <discoveredLetterText>You've learned how to craft stronger technology via microengineering.\n\nFurther research unlocked.</discoveredLetterText>
+  </ResearchProjectDef>
+
+   <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>StandardizedArms</defName>
+    <label>Standardized Weaponry</label>
+    <description>Research improvements on fabrication, allowing the creation of proper weaponry.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CompactConstruction</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>0.10</researchViewY>
+    <discoveredLetterText>You've learned how to craft stronger weapons via microengineering.\n\nFurther research unlocked.</discoveredLetterText>
+  </ResearchProjectDef>
+  
+     <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>HeavyArms</defName>
+    <label>Heavy Weaponry</label>
+    <description>Research improvements on weight distribution and load bearing for heavier and stronger handheld weapon platforms, allowing the creation of Heavy weaponry.</description>
+    <baseCost>9000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>StandardizedArms</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>4.00</researchViewX>
+  <researchViewY>0.10</researchViewY>
+    <discoveredLetterText>You've learned how to craft stronger weapons via microengineering.\n\nFurther research unlocked.</discoveredLetterText>
+  </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Esotech</defName>
+    <label>Esoteric Resarch Preparation</label>
+    <description>Begin Preparatory Research on Unique and Experimental Technology, recieved from unknown signals and consisting of fragmented digital blueprints and measurements.</description>
+    <baseCost>10000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>StandardizedArms</li>
+	  <li>NanoCompFab</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>0.90</researchViewY>
+    <discoveredLetterText>Esotech Research Preparations have been achieved, Decryption and research of the esoteric technologis may now begin at your order.</discoveredLetterText>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Apollyon</defName>
+    <label>Project:Apollyon</label>
+    <description>A Branch of technology specializing in Biomimetic Processes, using machines to replicate biological processes such as synthetic cells and muscles. 
+	The original source of this branch is stated to be the result of reverse engineering the creations of a long forgotten Mech-hive.</description>
+    <baseCost>20000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>Esotech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>2.40</researchViewY>
+    <discoveredLetterText>Project File: "Apollyon" has been Fully decrypted, allowing the production of Apollyon-Type equipment via their own Crafting Bench</discoveredLetterText>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Neutralizer</defName>
+    <label>Project:Neutralizer</label>
+    <description>A Branch of technology specializing in pacification of certain entities, ranging from Tranquilizers to Execution equipment.</description>
+    <baseCost>20000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>Esotech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>1.40</researchViewY>
+    <discoveredLetterText>Project File: "Neutralizer" Has been Fully decrypted, allowing the creation of Neutralizer-Type Equipment.</discoveredLetterText>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Leidstar</defName>
+    <label>Project:Leidstar</label>
+    <description>The file states that this branch was originally conceptualized after the discovery of an artifact found on the ancient orbital installation codenamed "LightHouse", these weapons function Via Heavy Inversion and application of Energy fields,
+	not having any required physical form of connection to their specific parts, appearing more like a floating cluster of technology, rather than a singular cohesive object.</description>
+    <baseCost>20000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>Esotech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>4.00</researchViewX>
+	<researchViewY>0.90</researchViewY>
+    <discoveredLetterText>Project:"Leidstar" has been Fully decrypted, Allowing the creation of the Leidstar-Type equipment via their own crafting bench.</discoveredLetterText>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <tab>DeeptechArmaments</tab>
+    <defName>Borealis</defName>
+    <label>Project:Borealis</label>
+    <description>A branch of technology stated to have been obtained from the derelict ruins on a perpetually frozen world, specializing in Rapid energy transmission, Forging methods that can somewhat mitigate prevent cold welding, or being capable of freezing or melting objects upon proper application.</description>
+    <baseCost>20000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>Esotech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>1.90</researchViewY>
+    <discoveredLetterText>Project "Borealis" has been Fully decrypted, allowing the production of Borealis-Type equipment via their own Crafting Bench</discoveredLetterText>
+  </ResearchProjectDef>
+    
+</Defs>

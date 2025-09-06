@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Cleaver -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DTA_Cleaver</defName>
+    <label>"Cleaver" Great Monoblade</label>
+    <description>A Larger monoblade.</description>
+    <graphicData>
+	<drawSize>1.7,1.7</drawSize>
+      <texPath>Things/Apollyon/Weapons/Melee/Incisor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>15</Plasteel>
+      <Steel>75</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>9500</WorkToMake>
+      <Mass>1.9</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+			<li>
+			<label>Corrosive Blade</label>
+			<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+			</capacities>
+			<power>25</power>
+			<cooldownTime>3</cooldownTime>
+		</li>
+		</tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_ApollyonBench</li></recipeUsers>
+      <researchPrerequisite>Apollyon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

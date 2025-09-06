@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Polar Claw -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DTA_PolarClaw</defName>
+    <label>Polar Claw</label>
+    <description>A Hardy Machete, this weapon is designed for use in Sub-Zero Environments with its slip-proof grip and relatively decent weight.</description>
+    <graphicData>
+	<drawSize>1.3,1.3</drawSize>
+      <texPath>Things/Borealis/Weapons/Melee/PolarClaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>5</Plasteel>
+      <Steel>75</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <Mass>1.1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+		<li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>Edge</label>
+        <capacities>
+		  <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+      <researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

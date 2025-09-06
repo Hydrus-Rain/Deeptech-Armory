@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Polar Breaker -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>DTA_PolarBreaker</defName>
+    <label>Polar Breaker</label>
+    <description>A Hybrid tool designed for use in Sub-Zero Environments, capable of serving like an Axe on one side and a study Sledgehammer oh the other, originally designed for breaking Thick ice and cleaving apart thick logs, it can serve just as well against armor and flesh.</description>
+    <graphicData>
+	<drawSize>1.9,1.9</drawSize>
+      <texPath>Things/Borealis/Weapons/Melee/PolarBreaker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>15</Plasteel>
+      <Steel>115</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>5150</WorkToMake>
+      <Mass>1.1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+	   <li>
+        <label>Hammerhead</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Demolish</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Axehead</label>
+        <capacities>
+		  <li>Cut</li>
+        </capacities>
+        <power>10.5</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+      <researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>550</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

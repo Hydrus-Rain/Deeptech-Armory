@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Pacifier -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>DTA_Pacifier</defName>
+    <label>Pacifier</label>
+    <description>A long blunt blade, useful in pacifying biological targets, or swiftly crushing armor.</description>
+    <graphicData>
+	<drawSize>1.9,1.9</drawSize>
+      <texPath>Things/Neutralizer/Pacifier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>10</Plasteel>
+      <Steel>125</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>6500</WorkToMake>
+      <Mass>1.010</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+	   <li>
+        <label>Pacifier Blade</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Poke</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	<recipeUsers><li>TableMachining</li></recipeUsers>
+      <researchPrerequisite>Neutralizer</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>550</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

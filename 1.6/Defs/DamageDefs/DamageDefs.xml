@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<DamageDef>
+        <defName>DTA_RapidThermalCooling</defName>
+        <label>Rapid Thermal Cooling</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has frozen to death.</deathMessage>
+        <hediff>Burn</hediff>
+        <armorCategory>Heat</armorCategory>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+        <additionalHediffs>
+            <li>
+              <hediff>DTA_RapidCooling</hediff>
+              <severityPerDamageDealt>0.0025</severityPerDamageDealt>
+              <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+
+<DamageDef>
+        <defName>DTA_RapidMechaniteCorrosion</defName>
+        <label>Rapid Mechanite Corrosion</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has dissolved.</deathMessage>
+        <hediff>Burn</hediff>
+        <armorCategory>Sharp</armorCategory>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+        <additionalHediffs>
+            <li>
+              <hediff>DTA_MechaniteCorrosion</hediff>
+              <severityPerDamageDealt>0.025</severityPerDamageDealt>
+              <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+
+<DamageDef>
+        <defName>DTA_Silencer_Strain</defName>
+        <label>Silencer Mechanite strain</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <hediff>Burn</hediff>
+        <armorCategory>Sharp</armorCategory>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+        <additionalHediffs>
+            <li>
+              <hediff>DTA_Neutralizer_Mechanites</hediff>
+              <severityPerDamageDealt>0.25</severityPerDamageDealt>
+              <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>false</makesAnimalsFlee>
+  </DamageDef>
+
+</Defs>

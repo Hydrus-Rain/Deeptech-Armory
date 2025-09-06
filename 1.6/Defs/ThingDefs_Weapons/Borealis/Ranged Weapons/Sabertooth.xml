@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- Sabertooth Rifle -->
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DTA_Sabertooth</defName>
+    <label>"Sabertooth" Gauss Sniper Rifle</label>
+    <description>A specialized Gauss rifle built off the "Snow Leopard" Blueprint, this version of a Gauss rifle uses Borealis High Conductivity Technology for near instant energy transmission to its coils, and rapid cooling of its internal parts.</description>
+    <graphicData>
+      <drawSize>1.6,1.6</drawSize>
+	  <texPath>Things/Borealis/Weapons/Ranged/Sabertooth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+	<recipeUsers><li>DTA_BorealBench</li></recipeUsers>
+	<researchPrerequisite>Borealis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>2.4</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <Steel>125</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>DTA_SabertoothRound</defaultProjectile>
+        <warmupTime>5.5</warmupTime>
+        <range>32.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DTA_SabertoothRound</defName>
+    <label>Sabertooth Round</label>
+    <graphicData>
+	 <texPath>Things/Borealis/Weapons/Projectiles/SR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>90</damageAmountBase>
+      <stoppingPower>3.9</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

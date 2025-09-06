@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Silencer -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>DTA_Silencer</defName>
+		<label>Silencer Sniper Rifle</label>
+		<description>A specially made sniper rifle, designed for covert neutralizaion of targets, using a special strain of mechanites that "Silences" the targets nervous system. Dose of silencer nanites required may vary.</description>
+		<graphicData>
+			<texPath>Things/Neutralizer/Silencer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.8,1.8)</drawSize>
+		</graphicData>
+		    <uiIconScale>1.1</uiIconScale>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+	<recipeUsers><li>TableMachining</li></recipeUsers>
+      <researchPrerequisite>Neutralizer</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>8500</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.68</AccuracyShort>
+			<AccuracyMedium>0.89</AccuracyMedium>
+			<AccuracyLong>0.87</AccuracyLong>
+			<RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>170</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DTA_Silencer_Rounds</defaultProjectile>
+				<warmupTime>6.5</warmupTime>
+				<range>30.9</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>DTA_Silencer_Rounds</defName>
+		<label>"Silencer" Sniper Rifle Rounds</label>
+		<graphicData>
+			<texPath>Things/Deeptech/Weapons/Projectiles/BulletRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>DTA_Silencer_Strain</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<speed>85</speed>
+		</projectile>
+	</ThingDef>
+</Defs>
