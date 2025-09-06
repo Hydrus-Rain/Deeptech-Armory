@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Magnus -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DTA_Magnus</defName>
+    <label>"Magnus" Gravity Hammer</label>
+    <description>An experimental hammer, made using gravity manipulation tech to make it lighter, yet just as strong.</description>
+    <graphicData>
+	<drawSize>1.7,1.7</drawSize>
+      <texPath>Things/Leidstar/Weapons/Melee/Magnus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Spacer</techLevel>
+	<costList>
+      <Plasteel>75</Plasteel>
+	  	<Uranium>48</Uranium>
+      <Steel>95</Steel>
+	  <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>17500</WorkToMake>
+      <Mass>1.4</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+			<li>
+			<label>Grav Hammerhead</label>
+			<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+			<li>Blunt</li>
+			</capacities>
+			<power>45</power>
+			<cooldownTime>3</cooldownTime>
+		</li>
+		</tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_LeidstarBench</li></recipeUsers>
+	<researchPrerequisite>Leidstar</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

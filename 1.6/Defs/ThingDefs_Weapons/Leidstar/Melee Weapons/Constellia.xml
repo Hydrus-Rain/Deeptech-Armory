@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Constellia -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DTA_Constellia</defName>
+    <label>"Constellia" Short Gravblade</label>
+    <description>An experimental short sword, made using gravity manipulation tech to make it lighter, yet just as strong.</description>
+    <graphicData>
+	<drawSize>1.7,1.7</drawSize>
+      <texPath>Things/Leidstar/Weapons/Melee/Constellia</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Industrial</techLevel>
+	<costList>
+      <Plasteel>35</Plasteel>
+	  <Uranium>23</Uranium>
+      <Steel>95</Steel>
+	  <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>9500</WorkToMake>
+      <Mass>1.3</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+			<li>
+			<label>Gravity Blade</label>
+			<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+			</capacities>
+			<power>35</power>
+			<cooldownTime>3</cooldownTime>
+		</li>
+		</tools>
+    <recipeMaker>
+	<recipeUsers><li>DTA_LeidstarBench</li></recipeUsers>
+	<researchPrerequisite>Leidstar</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>
